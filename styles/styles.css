@@ -1,0 +1,51 @@
+.jumbotron{ 
+    background-image: url("../images/maxresdefault.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin: 32px 0px 24px 0px;
+    padding: 16px 0px 16px 16px;
+}
+
+.lead{
+    font-size: 32px;
+}
+
+.choice{
+    font-size: 28px;
+}
+
+.card-group{
+    margin: 0px 0px 80px 0px;
+}
+
+footer {
+    margin: 40px 0px 0px 0px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: block;
+}
+
+footer a{
+    color: white;
+}
+
+p{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0px 30px 0px 0px;
+    width: 75%;
+}
+
+#total{
+    font-size: 28px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+h2{
+    margin-bottom: 60px;
+}
