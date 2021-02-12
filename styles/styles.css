@@ -37,8 +37,12 @@ p{
     padding: 0px 30px 0px 0px;
 }
 
-#total{
+.total{
     font-size: 28px;
+}
+
+.package{
+    font-size: 22px;
 }
 
 *, ::after, ::before {
