@@ -63,5 +63,6 @@ $("#order").click(function() {
           }
         ]
       }); 
+      window.location.href = "success.html";  
 });
 
