@@ -1,44 +1,33 @@
+let items = [
+    'Gnome', 'GreenEggs', 'BigDaddy', 'ExplorerAquarius',
+    'C11-0', 'D12-0', 'D12-5', 'E12-0',
+    'PortaPadII', 'PortaPadIIBlue', 'PortaPadBrown', 'PortaPadEBlack'
+            ];
+
+let itemids = [
+    'rocket1', 'rocket2', 'rocket3', 'rocket4',
+    'engine1', 'engine2', 'engine3', 'engine4',
+    'launchpad1', 'launchpad2', 'launchpad3', 'launchpad4'
+            ];       
+
 let total = 0;
 let item = "";
-let orderno = "asdf";
+let itemid = "";
+let orderno = "asdf";  /* variable set asdf for debugging only*/
 
-$("button").click(function() {
+$(".option").click(function() {
     total += Number($(this).val()); 
-    item += this.id;
+    item += items[this.id] + "/";
+    itemid += itemids[this.id];
     $(this).text("Added to Cart");
     $(this).css("background-color","green")
-    /*alert("Added to Cart");*/
     $("#cost").text("$"+total.toFixed(2));
     $("#item").text(item);
+    /*console.log(itemid);*/
 });
 
-/*$("#order").click(function() {
-    orderno = date.now();
-    alert(orderno); 
-    gtag('event','purchase',{
-        "transaction": orderno,
-        "affiliation": "Rockets red glare",
-        "value": total,
-        "currency": "USD",
-        "tax":0.00,
-        "shipping":0.00,
-        "items": [
-            {
-                "id": item,
-                "name": "RRG" + item,
-                "list_name": "Search Results",
-                "brand": "RRG",
-                "category": "rockets",
-                "variant": item,
-                "listposition": 1,
-                "quantity": 1,
-                "price": total
-            }
-        ]
-    });        
-});*/
 
-
+/* Send Transaction to Google */
 $("#order").click(function() {
     orderno = Date.now();
     /*alert(orderno);*/
@@ -51,12 +40,12 @@ $("#order").click(function() {
         "shipping": 0,
         "items": [
           {
-            "id": item,
-            "name": "RRG Rocket",
+            "id": itemid,
+            "name": "RRG Rocket",    /* for future reference this is product description */
             "list_name": "Search Results",
             "brand": "RRG",
             "category": "Rockets",
-            "variant": item,
+            "variant": itemid,
             "list_position": 1,
             "quantity": 1,
             "price": total
